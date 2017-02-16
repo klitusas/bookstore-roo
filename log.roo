@@ -1,0 +1,389 @@
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 11:40:49
+project --topLevelPackage com.springsource.roo.bookstore
+hint
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity jpa --class ~.domain.Shipping --testAutomatically 
+field string --fieldName Name --notNull --sizeMin 2
+field string --fieldName Address --notNull --sizeMin 2
+field number --fieldName postalCode --type java.lang.Number
+// [failed] entity jpa --class ~.domain.Order --testAutomatically 
+hint
+// [failed] entity jpa --class ~.domain.Order --testAutomatically 
+entity jpa --class ~.domain.Orders --testAutomatically 
+// [failed] field set --fieldName books --type ~.domain.Books
+entity jpa --class ~.domain.Categories --testAutomatically 
+field string --fieldName Name --notNull --sizeMin 2
+entity jpa --class ~.domain.Books --testAutomatically 
+field string --fieldName Title --notNull --sizeMin 2
+field string --fieldName ISBN --notNull --sizeMin 2
+field number --fieldName Quantity --type java.lang.Float
+field set --fieldName categories --type ~.domain.Categories
+field reference --fieldName books --type ~.domain.Books
+// [failed] field reference --fieldName Author --type ~.domain.Author
+entity jpa --class ~.domain.Author --testAutomatically 
+// [failed] entity jpa --class ~.domain.Books --testAutomatically 
+// [failed] focus --class ~.Books
+focus --class ~.domain.Books
+field reference --fieldName Author --type ~.domain.Author
+focus --class ~.domain.Orders
+field set --fieldName Books --type ~.domain.Books
+focus --class ~.domain.Author
+field string --fieldName name --notNull --sizeMin 2
+field number --fieldName age --type java.lang.Number
+field number --fieldName ratings --type java.lang.Number
+field set --fieldName Categories --type ~.domain.Categories
+field set --fieldName Books --type ~.domain.Books
+perform tests
+perform eclipse
+web mvc setup
+web mvc all --package ~.web
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-15 12:37:58
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 12:41:41
+focus --class ~.domain.Books
+hint
+field number --fieldName Cost --type java.lang.Float
+// [failed] field number --fieldName Quantity --type java.lang.Number
+field number --fieldName Quantity --type java.lang.Number
+perform tests
+perform eclipse
+perform package
+field reference --fieldName Author --type ~.domain.Author
+perform tests
+perform package
+perform eclipse
+perform package
+focus --class ~.domain.Orders
+field reference --fieldName Shipping --type ~.domain.Shipping
+perform tests
+perform package
+perform tests
+perform package
+perform eclipse
+hint relationship
+hint relationships
+focus --class ~.domain.Books
+perform tests
+perform eclipse
+perform package
+perform eclipse
+perform package
+perform tests
+perform package
+perform eclipse
+hint relationships
+perform tests
+perform package
+perform eclipse
+hint finder
+// [failed] field reference --fieldName Author --type ~.domain.Authorquit
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-15 15:21:10
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 15:31:46
+focus --class ~.domain.Author
+perform package
+perform package
+perform package
+focus --class ~.domain.Shipping
+field number --fieldName postalCode --type java.lang.Integer
+perform package
+focus --class ~.domain.Books
+// [failed] field number --fieldName Quantity --type java.lang.Integer
+field number --fieldName Quantity --type java.lang.Integer
+perform package
+focus --class ~.domain.Author
+field number --fieldName age --type java.lang.Integer
+field number --fieldName ratings --type java.lang.Integer
+perform package
+focus --class ~.domain.Books
+field reference --fieldName Author --type ~.domain.Author
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 16:50:29
+perform package
+security setup
+perform package
+logging setup --level ERROR --package WEB
+email sender setup --hostServer 127.0.0.1
+web mvc controller --class ~.domain.EmailController
+email sender setup --hostServer 127.0.0.1
+field email template --class ~.domain.EmailController
+perform package
+perform package
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-15 17:30:29
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 17:30:32
+email sender setup --hostServer 127.0.0.1
+email template setup --from
+email template setup --from roobookstore@roobookstore.com --subject "Book questions"
+class --class ~.email.NotificationServiceImpl
+field email template --fieldName mailTemplate --class ~.email.NotificationServiceImpl
+perform package
+perform package
+interface --class ~.email.NotificationService
+perform package
+perform test
+perform eclipse
+perform package
+perform package
+properties list --name email.properties --path SPRING_CONFIG_ROOT
+perform package
+controller class --class ~.email.NotificationServiceController
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 18:35:15
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+logging setup --package WEB --level DEBUG
+perform package
+database properties list
+entity jpa --class ~.domain.Email --testAutomatically 
+field string code --notNull --sizeMin 1 --sizeMax 30
+field string email --sizeMax 30
+field number attending --type java.lang.Integer
+field string specialRequests --sizeMax 100
+field date confirmed --type java.util.Date
+test integration
+controller scaffold ~.web.EmailController
+// [failed] selenium test --controller ~.web.RsvpController
+// [failed] selenium test --controller ~.web.MailController
+// [failed] selenium test --controller ~.web.MailController
+perform test
+perform package
+ email sender setup --hostServer 127.0.0.1
+perform package
+field email template --class ~.web.PublicRsvpController
+field email template --class ~.web.PublicEmailController
+controller class --class ~.web.PublicRsvpController
+email sender setup --hostServer 127.0.0.1
+controller class --class ~.web.PublicEmailController
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 19:55:44
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-15 19:57:20
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 19:57:23
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 19:57:49
+perform package
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-15 20:00:36
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 20:00:39
+perform package
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-15 20:01:24
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 20:01:29
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-15 20:41:11
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 20:47:02
+perform package
+perform package
+perform package
+perform package
+focus --class ~.domain.Books
+// [failed] field string --fieldName contentType --notNull 
+// [failed] field string --fieldName contentType --notNull 
+// [failed] field string --fieldName contentType --notNull 
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 21:27:34
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 21:29:47
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 21:30:10
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 21:34:14
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 21:34:41
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 22:58:40
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:01:50
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:03:30
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:03:53
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:04:18
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:04:40
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:05:43
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:06:05
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:12:42
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:13:44
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:28:05
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:31:00
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:32:52
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:33:17
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:42:36
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:50:06
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-15 23:52:32
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-16 00:45:55
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-16 11:25:29
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+perform package
+quit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2017-02-16 13:30:54
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2017-02-16 18:48:44
+focus --class ~.domain.Books
+finder add --finderName findBooksByName
+finder add --finderName findBooksByName --class ~.domain.Books
+finder list
+finder add --finderName findBooksesByTitleEquals 
+perform package
+help
+web mvc update tags 
+web mvc update tags 
+perform package
+help
+help
+perform package
+perform package
+help
+web mvc finder all
+perform package
+perform package
+perform package
+perform package
+finder list
+finder add --finderName findBooksesByTitleLike
+perform package
+perform package
+finder list
+help
+focus --class ~.domain.Orders
+hint
+field string --fieldName Name --notNull --sizeMin 2
+field string --fieldName Address --notNull --sizeMin 2
+field number --fieldName postalCode --type java.lang.Number
+jpa setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT 
+web mvc finder all
+finder add --finderName findBooksesByTitleLike
+finder list
+focus --class ~.domain.Books
+finder list
+finder add --finderName findBooksesByTitleLike
+web mvc finder all
+web mvc finder all
+perform package
+web mvc finder all
+finder add --finderName findBooksesByTitleLike
+web mvc finder all
+finder add --finderName findBooksesByTitleLike
+finder add --finderName findBooksesByTitleLike
+finder add --finderName findBooksesByTitleLike
+web mvc finder all
+web mvc finder all
+finder add --finderName findBooksesByTitleLike

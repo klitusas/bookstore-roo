@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_springsource_roo_bookstore_domain_Author" items="${authors}" z="zibDvR8i3PH1B4zq0aU2OMF3sGU=">
+        <table:table data="${authors}" id="l_com_springsource_roo_bookstore_domain_Author" path="/authors" z="DDJOX3BHVt96tSS+FI/NHDhRx6Y=">
+            <table:column id="c_com_springsource_roo_bookstore_domain_Author_name" property="name" z="F3HGZsIu6y7x7c/CRvLV856x448="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Author_Categories" property="categories" z="EyJIAjDbzcy/b2Ek6tlLj+AgSsU="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Author_Books" property="books" z="tQj8mU8N7sYn0jfs42fKYep7OG8="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Author_age" property="age" z="dL92XOBCdkTGL1eSSdMWvqHM60s="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Author_ratings" property="ratings" z="i/TWwbDti5PIZt7C1VL5p0zvDU8="/>
+        </table:table>
+    </page:list>
+</div>

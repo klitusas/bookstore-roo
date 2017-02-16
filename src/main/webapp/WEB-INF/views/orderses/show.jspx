@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_springsource_roo_bookstore_domain_Orders" object="${orders}" path="/orderses" z="Yy+ok6qha3lpj/LgFOIU3uNdfqA=">
+        <field:display field="books" id="s_com_springsource_roo_bookstore_domain_Orders_Books" object="${orders}" z="otQ4LE20bEkEdddOY6yX+WkTkpA="/>
+        <field:display field="shipping" id="s_com_springsource_roo_bookstore_domain_Orders_Shipping" object="${orders}" z="VCEGeTZ0tLTwU9hx/1r2UCaZHQA="/>
+        <field:display field="name" id="s_com_springsource_roo_bookstore_domain_Orders_Name" object="${orders}" z="Irdv/JSrzQOCV8QNr3bS9Nq3/0o="/>
+        <field:display field="address" id="s_com_springsource_roo_bookstore_domain_Orders_Address" object="${orders}" z="bzlK0GbkNBXILkAvAq+FeGFTe9s="/>
+        <field:display field="postalCode" id="s_com_springsource_roo_bookstore_domain_Orders_postalCode" object="${orders}" z="Qnha3KYjbnqDK5rFhunLCY7shJg="/>
+    </page:show>
+</div>

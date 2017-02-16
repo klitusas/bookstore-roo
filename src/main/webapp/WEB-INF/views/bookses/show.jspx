@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_springsource_roo_bookstore_domain_Books" object="${books}"  path="/bookses" z="fv7HkOJZkpedHLN+TGwRyI+kQjU=">
+        <field:display field="title" id="s_com_springsource_roo_bookstore_domain_Books_Title" object="${books}" z="3eOhW3evCDw9poB15xNB4+kDau4="/>
+        <field:display field="ISBN" id="s_com_springsource_roo_bookstore_domain_Books_ISBN" object="${books}" z="XWgaRgvfrR6T0fRUakqnTuKv5YA="/>
+        <field:display field="categories" id="s_com_springsource_roo_bookstore_domain_Books_categories" object="${books}" z="xZNzckQIOIhMGYzrQvp6Byh7od8="/>
+        <field:display field="cost" id="s_com_springsource_roo_bookstore_domain_Books_Cost" object="${books}" z="W6+uh1uJvEZPNwikv7TBUlZzSqo="/>
+        <field:display field="quantity" id="s_com_springsource_roo_bookstore_domain_Books_Quantity" object="${books}" z="6icEfeIrPdzF0VZaFMWPsgpLGOo="/>
+        <field:display field="author" id="s_com_springsource_roo_bookstore_domain_Books_Author" object="${books}" z="vu61NA56SbBcG++WqXnW454Di9o="/>
+        <field:display field="contentType" id="s_com_springsource_roo_bookstore_domain_Books_contentType" object="${books}" z="user-managed" render="false"/>
+        <field:display field="image" id="s_com_springsource_roo_bookstore_domain_Books_image" object="${books}" z="user-managed" render="false"/>
+        <img height="206px" src="${books.id}/image" width="200px"/>
+    </page:show>
+</div>

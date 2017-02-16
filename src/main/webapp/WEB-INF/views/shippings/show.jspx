@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_springsource_roo_bookstore_domain_Shipping" object="${shipping}" path="/shippings" z="hmfWNLeoz73dD2+ZqYzUK1BoWTk=">
+        <field:display field="name" id="s_com_springsource_roo_bookstore_domain_Shipping_Name" object="${shipping}" z="Am6sa21zVMJ5EJNeesv8+y099BQ="/>
+        <field:display field="address" id="s_com_springsource_roo_bookstore_domain_Shipping_Address" object="${shipping}" z="m2bjsGj5z7ljhAHZk98X7WHVQ8E="/>
+        <field:display field="postalCode" id="s_com_springsource_roo_bookstore_domain_Shipping_postalCode" object="${shipping}" z="z/AHejDHap1aYEhINJqw+vMg0uQ="/>
+    </page:show>
+</div>

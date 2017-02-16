@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:sec="http://www.springframework.org/security/tags" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_author" z="DETG4XqcVC9sb/BVL/ybUSG8lUM=">
+            <sec:authorize ifAllGranted="ROLE_ADMIN">
+            <menu:item id="i_author_new" messageCode="global_menu_new" url="/authors?form" z="e6WikSiFx46UnQunBmCd54pmrYE="/>
+            </sec:authorize>
+            <menu:item id="i_author_list" messageCode="global_menu_list" url="/authors?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/71/+sYxLDw3jeyTZyEHzZ9CQQQ="/>
+        </menu:category>
+        <menu:category id="c_categories" z="Hdo5tvCE2KjTsRhvUtLhMbEK66Y=">
+            <sec:authorize ifAllGranted="ROLE_ADMIN">
+            <menu:item id="i_categories_new" messageCode="global_menu_new" url="/categorieses?form" z="g/eLUhTFXAYjYCxtDHuQEEGb95w="/>
+            </sec:authorize>
+            <menu:item id="i_categories_list" messageCode="global_menu_list" url="/categorieses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="VV1E+th7jJlQMvQFYCHC+j9EN0I="/>
+        </menu:category>
+        <menu:category id="c_orders" z="AeHlAiddBnd4sK2AG/xjSbIvtfo=">
+            <menu:item id="i_orders_new" messageCode="global_menu_new" url="/orderses?form" z="q4yA+N3WoKRGjaVkRidM/dymGY8="/>
+            <sec:authorize ifAllGranted="ROLE_ADMIN">
+            <menu:item id="i_orders_list" messageCode="global_menu_list" url="/orderses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MES+SUBVWvkwbVClZ6meF2RlnHs="/>
+            </sec:authorize>
+        </menu:category>
+        <sec:authorize ifAllGranted="ROLE_ADMIN">
+        <menu:category id="c_shipping" z="JmBo7ZZdirfIZ+CbHPMwQubPJUY=">
+            <menu:item id="i_shipping_new" messageCode="global_menu_new" url="/shippings?form" z="msu+rA52Dne/lJfjRNMzsJDWkg8="/>
+            <menu:item id="i_shipping_list" messageCode="global_menu_list" url="/shippings?page=1&amp;size=${empty param.size ? 10 : param.size}" z="NcIzXGKwmTmkhuNTVSbNu2jppE8="/>
+        </menu:category>
+        </sec:authorize>
+        <menu:category id="c_books" z="NpwiNaVANZC4OMjjZxnCVcxAWSo=">
+            <sec:authorize ifAllGranted="ROLE_ADMIN">
+            <menu:item id="i_books_new" messageCode="global_menu_new" url="/bookses?form" z="o/9AQPWKuvL2ZtW7OxsjLKivDv4="/>
+            </sec:authorize>
+            <menu:item id="i_books_list" messageCode="global_menu_list" url="/bookses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4G8HrRZ33T1pyyMejHQPYg+5SH0="/>
+            <menu:item id="fi_books_titlelike" messageCode="global_menu_find" url="/bookses?find=ByTitleLike&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="vnZcqP8xIN5Yvw1an442JjzMuz4="/>
+        </menu:category>
+        <menu:category id="c_email" z="OdKbOQLS7JRJZVljWOm/EonlMPw=">
+            <menu:item id="i_email_new" messageCode="global_menu_new" url="/emails?form" z="9kwhlOd3LziCK8fO9/lkg1/LUd4="/>
+            <sec:authorize ifAllGranted="ROLE_ADMIN">
+            <menu:item id="i_email_list" messageCode="global_menu_list" url="/emails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="nZriADzkEHyX1WPtgN4ZE2zlMDc="/>
+            </sec:authorize>
+        </menu:category>
+    </menu:menu>
+</div>

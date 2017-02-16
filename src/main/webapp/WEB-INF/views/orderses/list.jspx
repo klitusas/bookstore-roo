@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_springsource_roo_bookstore_domain_Orders" items="${orderses}" z="f/TDIZ1PxlQCpyT6L3Y5WN7aZQw=">
+        <table:table data="${orderses}" id="l_com_springsource_roo_bookstore_domain_Orders" path="/orderses" z="MPDOxSZOpxbvDvHh2D/TPo1ftEw=">
+            <table:column id="c_com_springsource_roo_bookstore_domain_Orders_Books" property="books" z="gYfypwMdyFMEToaH3fwUUK8FMjY="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Orders_Shipping" property="shipping" z="hKztvwm4KHHkUoCJp5DW6vXSSsI="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Orders_Name" property="name" z="Ov/HtBseDuFeGvd8Kl/493uQkIc="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Orders_Address" property="address" z="r7g6a+ne1EtjzSF9NGEPaY37Cms="/>
+            <table:column id="c_com_springsource_roo_bookstore_domain_Orders_postalCode" property="postalCode" z="W4vTI4q8zu4armnhQK9ZfwIjPbo="/>
+        </table:table>
+    </page:list>
+</div>
